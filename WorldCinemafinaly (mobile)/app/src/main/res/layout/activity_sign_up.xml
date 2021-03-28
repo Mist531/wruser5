@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/arrow_signUp"
+        android:layout_width="26dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/register"
+        android:textSize="44sp"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrow_signUp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="35dp">
+
+        <EditText
+            android:id="@+id/email_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:inputType="textEmailAddress"
+            android:hint="jane@example.com"/>
+
+        <EditText
+            android:id="@+id/password_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:inputType="textPassword"
+            android:layout_marginTop="15dp"
+            android:hint="••••••••••••" />
+
+        <LinearLayout
+            android:id="@+id/registration"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/buttom_background_style"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
